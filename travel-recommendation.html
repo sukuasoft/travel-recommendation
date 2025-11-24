@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Recommendations - Descubra seu próximo destino</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-plane"></i>
+                <span>Travel Recommendations</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Search -->
+    <section id="home" class="hero-section">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1>Descubra Seu Próximo Destino</h1>
+                <p>Explore países, templos e praias incríveis ao redor do mundo</p>
+                
+                <div class="search-container">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Busque por países, praias, templos..."
+                    >
+                    <button id="searchBtn" class="btn-search">
+                        <i class="fas fa-search"></i> Buscar
+                    </button>
+                    <button id="clearBtn" class="btn-clear">
+                        <i class="fas fa-times"></i> Limpar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="results" class="results-section">
+        <div class="container">
+            <div id="resultsContainer"></div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations Section -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <h2>Destinos em Destaque</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="featured-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3>Países</h3>
+                    <p>Explore cidades vibrantes em países ao redor do mundo</p>
+                    <button class="btn-category" data-category="countries">
+                        Ver Países
+                    </button>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-icon">
+                        <i class="fas fa-torii-gate"></i>
+                    </div>
+                    <h3>Templos</h3>
+                    <p>Descubra monumentos históricos e espirituais</p>
+                    <button class="btn-category" data-category="temples">
+                        Ver Templos
+                    </button>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3>Praias</h3>
+                    <p>Relaxe nas praias mais paradisíacas do planeta</p>
+                    <button class="btn-category" data-category="beaches">
+                        Ver Praias
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Sobre Nós</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Bem-vindo ao <strong>Travel Recommendations</strong>, seu guia confiável para descobrir 
+                        os destinos mais incríveis do mundo. Nossa missão é inspirar viajantes a explorar 
+                        novas culturas, paisagens deslumbrantes e experiências inesquecíveis.
+                    </p>
+                    <p>
+                        Com uma seleção cuidadosamente curada de países, templos históricos e praias paradisíacas, 
+                        oferecemos recomendações personalizadas para todos os tipos de aventureiros. 
+                        Seja você um amante da história, da natureza ou da vida urbana, temos o destino perfeito 
+                        esperando por você.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-globe-americas"></i>
+                            <span>Destinos Globais</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <span>Recomendações Curadas</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <span>Guias Detalhados</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-content">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@travelrecommendations.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>+55 (11) 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>São Paulo, Brasil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-plane"></i> Travel Recommendations</h3>
+                    <p>Transformando sonhos de viagem em realidade desde 2025.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Siga-nos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Travel Recommendations. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
